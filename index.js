@@ -56,7 +56,7 @@ async function sendEmail(payload) {
 
   const mailOptions = {
     from: process.env.EMAIL_FROM,
-    to: [process.env.EMAIL_TO, process.env.EMAIL_TO_1].join(', '), // Only EMAIL_TO and EMAIL_TO_1
+    to: process.env.EMAIL_TO, // Only EMAIL_TO and EMAIL_TO_1
     subject: `Webhook Alert: ${payload.title}`,
     text: `Alert: \nTitle: ${payload.title}\nMessage: ${payload.message}`,
   };
